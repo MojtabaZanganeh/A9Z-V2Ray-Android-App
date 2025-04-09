@@ -3,20 +3,12 @@ package ir.a9z.v2rayconfig
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -27,7 +19,6 @@ import androidx.navigation.compose.rememberNavController
 import ir.a9z.v2rayconfig.ui.screens.ConfigScreen
 import ir.a9z.v2rayconfig.ui.screens.SubLinkScreen
 import ir.a9z.v2rayconfig.ui.theme.A9ZV2RayConfigTheme
-import ir.a9z.v2rayconfig.ui.theme.Primary
 import ir.a9z.v2rayconfig.ui.viewmodel.MainViewModel
 
 // Define sealed class for Bottom Navigation Items
@@ -52,7 +43,7 @@ sealed class Screen(
         labelResId = R.string.config_title,
         icon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_copy),
+                painter = painterResource(id = R.drawable.ic_configuration),
                 contentDescription = "Copy",
             )
         }
